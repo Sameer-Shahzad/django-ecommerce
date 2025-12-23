@@ -18,3 +18,5 @@ class Product (models.Model):
     
     def _str__(self):
         return self.product_name
+    
+    
