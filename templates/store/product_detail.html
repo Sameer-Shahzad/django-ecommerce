@@ -71,11 +71,16 @@
                                 </label>
                             </div>
                         </div>
-
-                        <a href="#" class="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">
-                            <span class="mr-2">Add to cart</span>
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
+                        {% if single_product.stock <= 0 %}
+                            <div class="text-red-600 mb-6 font-bold text-lg">
+                                <p>Out of Stock</p>
+                            </div>
+                        {% else %}
+                            <a href="#" class="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">
+                                <span class="mr-2">Add to cart</span>
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        {% endif %}
                     </article> 
                 </main> 
             </div> 

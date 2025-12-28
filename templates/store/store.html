@@ -67,14 +67,14 @@
                     <div class="bg-white border rounded shadow-sm hover:shadow-md transition overflow-hidden">
                         <div class="h-52 bg-gray-200">
                             {% if product.product_image %}
-                                <img src="{{ product.product_image.url }}" class="w-full h-full object-cover">
+                                <a href="{{ product.get_url }}"><img src="{{ product.product_image.url }}" class="w-full h-full object-cover"></a>
                             {% else %}
                                 <div class="flex items-center justify-center h-full text-gray-400">No Image</div>
                             {% endif %}
                         </div>
                         <div class="p-4 text-center">
-                            <a href="#" class="text-blue-600 hover:underline font-medium block h-12 overflow-hidden">{{ product.product_name }}</a>
-                            <div class="mt-2 mb-4">
+                            <a href="{{ product.get_url }}" class="text-blue-600 hover:underline font-medium block h-12 overflow-hidden">{{ product.product_name }}</a>
+                            <div class="mt-2 mb-4"> 
                                 <span class="text-xl font-bold text-gray-900">${{ product.price }}</span>
                             </div>
                             <button class="w-full bg-blue-600 text-white py-2 rounded flex items-center justify-center space-x-2 hover:bg-blue-700">
