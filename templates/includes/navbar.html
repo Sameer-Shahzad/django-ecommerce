@@ -73,10 +73,10 @@
                         </div>
                     </div>
 
-                    <a href="#" class="relative p-2 rounded-full border border-gray-200 hover:bg-gray-50 transition">
+                    <a href="{% url 'cart' %}" class="relative p-2 rounded-full border border-gray-200 hover:bg-gray-50 transition">
                         <i class="fa fa-shopping-cart text-gray-600 text-xl"></i>
                         <span class="absolute -top-1 -right-1 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">
-                            0
+                            {{ cart_count }}
                         </span>
                     </a>
                 </div>

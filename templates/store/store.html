@@ -83,8 +83,8 @@
                             <div class="mt-2 mb-4"> 
                                 <span class="text-xl font-bold text-gray-900">${{ product.price }}</span>
                             </div>
-                            <a href="{% url 'add_cart' product.id %}" class="w-full bg-blue-600 text-white py-2 rounded flex items-center justify-center space-x-2 hover:bg-blue-700">
-                                <span>Add to cart</span>
+                            <a href="{{ product.get_url }}" class="w-full bg-blue-600 text-white py-2 rounded flex items-center justify-center space-x-2 hover:bg-blue-700">
+                                <span>View Details</span>
                             </a>
                         </div>
                     </div>
